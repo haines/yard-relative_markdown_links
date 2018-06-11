@@ -1,0 +1,5 @@
+--load ./lib/yard/relative_markdown_links.rb
+--markup markdown
+--no-private
+-
+*.md

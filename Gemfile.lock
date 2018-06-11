@@ -1,0 +1,52 @@
+PATH
+  remote: .
+  specs:
+    yard-relative_markdown_links (0.1.0)
+      nokogiri (~> 1.8.1)
+
+GEM
+  remote: https://rubygems.org/
+  specs:
+    ast (2.4.0)
+    coderay (1.1.2)
+    jaro_winkler (1.5.1)
+    method_source (0.9.0)
+    mini_portile2 (2.3.0)
+    minitest (5.11.3)
+    nokogiri (1.8.2)
+      mini_portile2 (~> 2.3.0)
+    parallel (1.12.1)
+    parser (2.5.1.0)
+      ast (~> 2.4.0)
+    powerpack (0.1.2)
+    pry (0.11.3)
+      coderay (~> 1.1.0)
+      method_source (~> 0.9.0)
+    rainbow (3.0.0)
+    rake (12.3.1)
+    rubocop (0.57.1)
+      jaro_winkler (~> 1.5.1)
+      parallel (~> 1.10)
+      parser (>= 2.5)
+      powerpack (~> 0.1)
+      rainbow (>= 2.2.2, < 4.0)
+      ruby-progressbar (~> 1.7)
+      unicode-display_width (~> 1.0, >= 1.0.1)
+    ruby-progressbar (1.9.0)
+    unicode-display_width (1.4.0)
+    yard (0.9.14)
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  bundler (~> 1.16)
+  minitest (~> 5.11)
+  pry (~> 0.11)
+  rake (~> 12.1)
+  rubocop (~> 0.57.1)
+  yard (~> 0.9)
+  yard-relative_markdown_links!
+
+BUNDLED WITH
+   1.16.2
