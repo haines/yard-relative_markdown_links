@@ -3,6 +3,6 @@
 module YARD
   module RelativeMarkdownLinks
     # Current version of the yard-relative_markdown_links gem.
-    VERSION = "0.1.0"
+    VERSION = "0.1.1"
   end
 end
