@@ -1,0 +1,35 @@
+AllCops:
+  TargetRubyVersion: 2.3
+  Exclude:
+    - bin/bundle
+    - bin/rake
+    - vendor/bundle/**/*
+
+Metrics/LineLength:
+  Enabled: false
+
+Metrics/MethodLength:
+  Enabled: false
+
+Style/BlockDelimiters:
+  EnforcedStyle: semantic
+
+Style/Documentation:
+  Exclude:
+    - test/**/*
+
+Style/HashSyntax:
+  Exclude:
+    - Rakefile
+
+Style/Lambda:
+  EnforcedStyle: literal
+
+Style/StringLiterals:
+  EnforcedStyle: double_quotes
+
+Style/SymbolArray:
+  EnforcedStyle: brackets
+
+Style/WordArray:
+  EnforcedStyle: brackets
