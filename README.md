@@ -35,7 +35,7 @@ $ gem install yard-relative_markdown_links
 Add this line to your application's `.yardopts`:
 
 ```
---plugin yard-relative_markdown_links
+--plugin relative_markdown_links
 ```
 
 You'll also need to make sure your Markdown files are processed by YARD.
