@@ -21,6 +21,7 @@ module YARD # rubocop:disable Style/Documentation
       html.css("a[href]").each do |link|
         href = URI(link["href"])
         next unless href.relative? && markup_for_file(nil, href.path) == :markdown
+
         link.replace "{file:#{href} #{link.inner_html}}"
       end
       super(html.to_s)

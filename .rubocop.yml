@@ -11,6 +11,10 @@ Metrics/LineLength:
 Metrics/MethodLength:
   Enabled: false
 
+Naming/FileName:
+  Exclude:
+    - lib/yard-relative_markdown_links.rb
+
 Style/BlockDelimiters:
   EnforcedStyle: semantic
 
@@ -18,9 +22,18 @@ Style/Documentation:
   Exclude:
     - test/**/*
 
+Style/HashEachMethods:
+  Enabled: true
+
 Style/HashSyntax:
   Exclude:
     - Rakefile
+
+Style/HashTransformKeys:
+  Enabled: true
+
+Style/HashTransformValues:
+  Enabled: true
 
 Style/Lambda:
   EnforcedStyle: literal
