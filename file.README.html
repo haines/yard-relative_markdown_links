@@ -6,15 +6,15 @@
 <title>
   File: README
   
-    &mdash; Documentation by YARD 0.9.14
+    &mdash; Documentation by YARD 0.9.24
   
 </title>
 
-  <link rel="stylesheet" href="css/style.css" type="text/css" charset="utf-8" />
+  <link rel="stylesheet" href="css/style.css" type="text/css" />
 
-  <link rel="stylesheet" href="css/common.css" type="text/css" charset="utf-8" />
+  <link rel="stylesheet" href="css/common.css" type="text/css" />
 
-<script type="text/javascript" charset="utf-8">
+<script type="text/javascript">
   pathId = "README";
   relpath = '';
 </script>
@@ -60,25 +60,13 @@
       <div id="content"><div id='filecontents'>
 <h1 id="label-YARD-3A-3ARelativeMarkdownLinks">YARD::RelativeMarkdownLinks</h1>
 
-<p><a href="https://haines.github.io/yard-relative_markdown_links/"><img src="https://img.shields.io/badge/docs-github.io-blue.svg?style=flat-square"></a>
-<a href="https://rubygems.org/gems/yard-relative_markdown_links"><img src="https://img.shields.io/gem/v/yard-relative_markdown_links.svg?style=flat-square"></a>
-<a href="https://github.com/haines/yard-relative_markdown_links"><img src="https://img.shields.io/badge/github-haines%2Fyard--relative__markdown__links-blue.svg?style=flat-square"></a>
-<a href="https://github.com/haines/yard-relative_markdown_links/blob/master/LICENSE.md"><img src="https://img.shields.io/github/license/haines/yard-relative_markdown_links.svg?style=flat-square"></a>
-<a href="https://travis-ci.org/haines/yard-relative_markdown_links"><img src="https://img.shields.io/travis/haines/yard-relative_markdown_links.svg?style=flat-square"></a></p>
+<p><a href="https://haines.github.io/yard-relative_markdown_links/"><img src="https://img.shields.io/badge/docs-github.io-blue.svg?style=flat-square"></a> <a href="https://rubygems.org/gems/yard-relative_markdown_links"><img src="https://img.shields.io/gem/v/yard-relative_markdown_links.svg?style=flat-square"></a> <a href="https://github.com/haines/yard-relative_markdown_links"><img src="https://img.shields.io/badge/github-haines%2Fyard--relative__markdown__links-blue.svg?style=flat-square"></a> <a href="https://github.com/haines/yard-relative_markdown_links/blob/master/LICENSE.md"><img src="https://img.shields.io/github/license/haines/yard-relative_markdown_links.svg?style=flat-square"></a> <a href="https://travis-ci.org/haines/yard-relative_markdown_links"><img src="https://img.shields.io/travis/haines/yard-relative_markdown_links.svg?style=flat-square"></a></p>
 
-<p>A <a href="https://yardoc.org">YARD</a> plugin to allow relative links
-between Markdown files.</p>
+<p>A <a href="https://yardoc.org">YARD</a> plugin to allow relative links between Markdown files.</p>
 
-<p>GitHub and YARD render Markdown files differently. In particular, relative
-links between Markdown files that work in GitHub don't work in YARD.
-For example, if you have <code>[hello](FOO.md)</code> in your README, YARD
-renders it as <code>&lt;a
-href="FOO.md"&gt;hello&lt;/a&gt;</code>, creating a broken link
-in your docs.</p>
+<p>GitHub and YARD render Markdown files differently. In particular, relative links between Markdown files that work in GitHub don't work in YARD. For example, if you have <code>[hello](FOO.md)</code> in your README, YARD renders it as <code>&lt;a href="FOO.md"&gt;hello&lt;/a&gt;</code>, creating a broken link in your docs.</p>
 
-<p>With this plugin enabled, you'll get <code>&lt;a
-href="file.FOO.html"&gt;hello&lt;/a&gt;</code> instead, which
-correctly links through to the rendered HTML file.</p>
+<p>With this plugin enabled, you'll get <code>&lt;a href="file.FOO.html"&gt;hello&lt;/a&gt;</code> instead, which correctly links through to the rendered HTML file.</p>
 
 <h2 id="label-Installation">Installation</h2>
 
@@ -104,9 +92,7 @@ correctly links through to the rendered HTML file.</p>
 <pre class="code ruby"><code class="ruby">--plugin relative_markdown_links
 </code></pre>
 
-<p>You'll also need to make sure your Markdown files are processed by
-YARD. To include all Markdown files in your project, add the following
-lines to the end of your application's <code>.yardopts</code>:</p>
+<p>You'll also need to make sure your Markdown files are processed by YARD. To include all Markdown files in your project, add the following lines to the end of your application's <code>.yardopts</code>:</p>
 
 <pre class="code ruby"><code class="ruby">-
 **/*.md
@@ -114,22 +100,13 @@ lines to the end of your application's <code>.yardopts</code>:</p>
 
 <h2 id="label-Development">Development</h2>
 
-<p>After checking out the repo, run <code>bin/setup</code> to install
-dependencies. Then, run <code>bin/rake test</code> to run the tests. You
-can also run <code>bin/console</code> for an interactive prompt that will
-allow you to experiment.</p>
+<p>After checking out the repo, run <code>bin/setup</code> to install dependencies. Then, run <code>bin/rake test</code> to run the tests. You can also run <code>bin/console</code> for an interactive prompt that will allow you to experiment.</p>
 
-<p>To install this gem onto your local machine, run <code>bin/rake
-install</code>. To release a new version, update the version number in
-<code>lib/yard/relative_markdown_links/version.rb</code>, and then run
-<code>bin/rake release</code>, which will create a git tag for the version,
-push git commits and tags, and push the <code>.gem</code> file to <a href="https://rubygems.org">RubyGems</a>.</p>
+<p>To install this gem onto your local machine, run <code>bin/rake install</code>. To release a new version, update the version number in <code>lib/yard/relative_markdown_links/version.rb</code>, and then run <code>bin/rake release</code>, which will create a git tag for the version, push git commits and tags, and push the <code>.gem</code> file to <a href="https://rubygems.org">RubyGems</a>.</p>
 
 <h2 id="label-Contributing">Contributing</h2>
 
-<p>Bug reports and pull requests are welcome <a href="https://github.com/haines/yard-relative_markdown_links">on
-GitHub</a>. This project is intended to be a safe, welcoming space for
-collaboration, and contributors are expected to adhere to the <a href="file.CODE_OF_CONDUCT.html" title="code of conduct">code of conduct</a>.</p>
+<p>Bug reports and pull requests are welcome <a href="https://github.com/haines/yard-relative_markdown_links">on GitHub</a>. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the <a href="file.CODE_OF_CONDUCT.html" title="code of conduct">code of conduct</a>.</p>
 
 <h2 id="label-License">License</h2>
 
@@ -137,9 +114,9 @@ collaboration, and contributors are expected to adhere to the <a href="file.CODE
 </div></div>
 
       <div id="footer">
-  Generated on Mon Jun 11 11:06:57 2018 by
+  Generated on Fri Mar  6 18:26:16 2020 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
-  0.9.14 (ruby-2.5.1).
+  0.9.24 (ruby-2.7.0).
 </div>
 
     </div>

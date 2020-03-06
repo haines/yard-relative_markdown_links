@@ -6,15 +6,15 @@
 <title>
   Module: YARD::RelativeMarkdownLinks
   
-    &mdash; Documentation by YARD 0.9.14
+    &mdash; Documentation by YARD 0.9.24
   
 </title>
 
-  <link rel="stylesheet" href="../css/style.css" type="text/css" charset="utf-8" />
+  <link rel="stylesheet" href="../css/style.css" type="text/css" />
 
-  <link rel="stylesheet" href="../css/common.css" type="text/css" charset="utf-8" />
+  <link rel="stylesheet" href="../css/common.css" type="text/css" />
 
-<script type="text/javascript" charset="utf-8">
+<script type="text/javascript">
   pathId = "YARD::RelativeMarkdownLinks";
   relpath = '../';
 </script>
@@ -88,16 +88,9 @@
 <h2>Overview</h2><div class="docstring">
   <div class="discussion">
     
-<p>GitHub and YARD render Markdown files differently. In particular, relative
-links between Markdown files that work in GitHub don't work in YARD.
-For example, if you have <code>[hello](FOO.md)</code> in your README, YARD
-renders it as <code>&lt;a
-href="FOO.md"&gt;hello&lt;/a&gt;</code>, creating a broken link
-in your docs.</p>
+<p>GitHub and YARD render Markdown files differently. In particular, relative links between Markdown files that work in GitHub don't work in YARD. For example, if you have <code>[hello](FOO.md)</code> in your README, YARD renders it as <code>&lt;a href="FOO.md"&gt;hello&lt;/a&gt;</code>, creating a broken link in your docs.</p>
 
-<p>With this plugin enabled, you'll get <code>&lt;a
-href="file.FOO.html"&gt;hello&lt;/a&gt;</code> instead, which
-correctly links through to the rendered HTML file.</p>
+<p>With this plugin enabled, you'll get <code>&lt;a href="file.FOO.html"&gt;hello&lt;/a&gt;</code> instead, which correctly links through to the rendered HTML file.</p>
 
 
   </div>
@@ -128,7 +121,7 @@ correctly links through to the rendered HTML file.</p>
 
 </div>
         </dt>
-        <dd><pre class="code"><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>0.1.2</span><span class='tstring_end'>&quot;</span></span></pre></dd>
+        <dd><pre class="code"><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>0.2.0</span><span class='tstring_end'>&quot;</span></span></pre></dd>
       
     </dl>
   
@@ -231,8 +224,7 @@ correctly links through to the rendered HTML file.</p>
       
         &mdash;
         <div class='inline'>
-<p>HTML with relative links to Markdown files converted to
-<code>{file:}</code> links.</p>
+<p>HTML with relative links to Markdown files converted to <code>{file:}</code> links.</p>
 </div>
       
     </li>
@@ -253,7 +245,8 @@ correctly links through to the rendered HTML file.</p>
 24
 25
 26
-27</pre>
+27
+28</pre>
     </td>
     <td>
       <pre class="code"><span class="info file"># File 'lib/yard/relative_markdown_links.rb', line 19</span>
@@ -263,6 +256,7 @@ correctly links through to the rendered HTML file.</p>
   <span class='id identifier rubyid_html'>html</span><span class='period'>.</span><span class='id identifier rubyid_css'>css</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>a[href]</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_link'>link</span><span class='op'>|</span>
     <span class='id identifier rubyid_href'>href</span> <span class='op'>=</span> <span class='const'>URI</span><span class='lparen'>(</span><span class='id identifier rubyid_link'>link</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>href</span><span class='tstring_end'>&quot;</span></span><span class='rbracket'>]</span><span class='rparen'>)</span>
     <span class='kw'>next</span> <span class='kw'>unless</span> <span class='id identifier rubyid_href'>href</span><span class='period'>.</span><span class='id identifier rubyid_relative?'>relative?</span> <span class='op'>&amp;&amp;</span> <span class='id identifier rubyid_markup_for_file'>markup_for_file</span><span class='lparen'>(</span><span class='kw'>nil</span><span class='comma'>,</span> <span class='id identifier rubyid_href'>href</span><span class='period'>.</span><span class='id identifier rubyid_path'>path</span><span class='rparen'>)</span> <span class='op'>==</span> <span class='symbol'>:markdown</span>
+
     <span class='id identifier rubyid_link'>link</span><span class='period'>.</span><span class='id identifier rubyid_replace'>replace</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>{file:</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_href'>href</span><span class='embexpr_end'>}</span><span class='tstring_content'> </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_link'>link</span><span class='period'>.</span><span class='id identifier rubyid_inner_html'>inner_html</span><span class='embexpr_end'>}</span><span class='tstring_content'>}</span><span class='tstring_end'>&quot;</span></span>
   <span class='kw'>end</span>
   <span class='kw'>super</span><span class='lparen'>(</span><span class='id identifier rubyid_html'>html</span><span class='period'>.</span><span class='id identifier rubyid_to_s'>to_s</span><span class='rparen'>)</span>
@@ -277,9 +271,9 @@ correctly links through to the rendered HTML file.</p>
 </div>
 
       <div id="footer">
-  Generated on Mon Jun 11 11:06:57 2018 by
+  Generated on Fri Mar  6 18:26:16 2020 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
-  0.9.14 (ruby-2.5.1).
+  0.9.24 (ruby-2.7.0).
 </div>
 
     </div>
