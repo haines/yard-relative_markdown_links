@@ -19,6 +19,11 @@ Gem::Specification.new do |spec|
   spec.files = Dir.chdir(__dir__) { `git ls-files -z`.split("\x0").reject { |path| path.match(%r{^test/}) } }
   spec.require_paths = ["lib"]
 
+  spec.metadata["bug_tracker_uri"] = "#{spec.homepage}/issues"
+  spec.metadata["changelog_uri"] = "#{spec.homepage}/blob/master/CHANGELOG.md"
+  spec.metadata["documentation_uri"] = "https://haines.github.io/yard-relative_markdown_links/"
+  spec.metadata["homepage_uri"] = spec.homepage
+  spec.metadata["source_code_uri"] = spec.homepage
   spec.metadata["yard.run"] = "yri"
 
   spec.add_dependency "nokogiri", "~> 1.8"
