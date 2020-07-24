@@ -2,7 +2,9 @@
 
 require "nokogiri"
 require "yard"
+require "uri"
 require "yard/relative_markdown_links/version"
+
 
 module YARD # rubocop:disable Style/Documentation
   # GitHub and YARD render Markdown files differently. In particular, relative
@@ -13,14 +15,15 @@ module YARD # rubocop:disable Style/Documentation
   # With this plugin enabled, you'll get `<a href="file.FOO.html">hello</a>`
   # instead, which correctly links through to the rendered HTML file.
   module RelativeMarkdownLinks
-    # Resolves relative links to Markdown files.
+    # Resolves relative links from Markdown files.
     # @param [String] text the HTML fragment in which to resolve links.
-    # @return [String] HTML with relative links to Markdown files converted to `{file:}` links.
+    # @return [String] HTML with relative links to extra files converted to `{file:}` links.
     def resolve_links(text)
       html = Nokogiri::HTML.fragment(text)
       html.css("a[href]").each do |link|
         href = URI(link["href"])
-        next unless href.relative? && markup_for_file(nil, href.path) == :markdown
+
+        next unless href.relative? && options.files.map(&:filename).include?(href.path)
 
         link.replace "{file:#{href} #{link.inner_html}}"
       end

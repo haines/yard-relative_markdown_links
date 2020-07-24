@@ -12,6 +12,15 @@ module YARD
         def resolve_links(text)
           text
         end
+
+        def options
+          OpenStruct.new(
+            files: [
+              OpenStruct.new(filename: 'world.md'),
+              OpenStruct.new(filename: 'planet.yaml')
+            ]
+          )
+        end
       }.new
     end
 
@@ -25,6 +34,26 @@ module YARD
       HTML
 
       assert_equal expected_output, @template.resolve_links(input)
+    end
+
+    def test_relative_nonmarkdown_links
+      input = <<~HTML
+        <p>Hello, <a href="planet.yaml">Planet</a></p>
+      HTML
+
+      expected_output = <<~HTML
+        <p>Hello, {file:planet.yaml Planet}</p>
+      HTML
+
+      assert_equal expected_output, @template.resolve_links(input)
+    end
+
+    def test_relative_links_to_unincluded_files
+      input = <<~HTML
+        <p>Hello, <a href="moon.md">Moon</a></p>
+      HTML
+
+      assert_equal input, @template.resolve_links(input)
     end
 
     def test_absolute_markdown_links
