@@ -58,7 +58,7 @@ module YARD
 
     def test_absolute_markdown_links
       input = <<~HTML
-        <p>Hello, <a href="https://github.com/haines/yard-relative_markdown_links/blob/master/README.md">World</a></p>
+        <p>Hello, <a href="https://github.com/haines/yard-relative_markdown_links/blob/main/README.md">World</a></p>
       HTML
 
       assert_equal input, @template.resolve_links(input)
