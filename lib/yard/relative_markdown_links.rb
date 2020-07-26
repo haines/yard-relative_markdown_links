@@ -1,10 +1,9 @@
 # frozen_string_literal: true
 
 require "nokogiri"
-require "yard"
 require "uri"
+require "yard"
 require "yard/relative_markdown_links/version"
-
 
 module YARD # rubocop:disable Style/Documentation
   # GitHub and YARD render Markdown files differently. In particular, relative

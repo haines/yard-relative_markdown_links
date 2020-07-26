@@ -16,8 +16,8 @@ module YARD
         def options
           OpenStruct.new(
             files: [
-              OpenStruct.new(filename: 'world.md'),
-              OpenStruct.new(filename: 'planet.yaml')
+              OpenStruct.new(filename: "world.md"),
+              OpenStruct.new(filename: "planet.yaml")
             ]
           )
         end
