@@ -1,0 +1,61 @@
+name: pull-request
+
+on:
+  - pull_request
+
+jobs:
+  test:
+    strategy:
+      matrix:
+        ruby:
+          - "2.5"
+          - "2.6"
+          - "2.7"
+
+    name: Ruby ${{ matrix.ruby }}
+
+    runs-on: ubuntu-latest
+
+    container:
+      image: ruby:${{ matrix.ruby }}-alpine
+
+    env:
+      BUNDLE_PATH: ${{ github.workspace }}/vendor/bundle
+
+    steps:
+      - name: Install dependencies
+        run: apk add build-base git
+
+      - name: Check out source code
+        uses: actions/checkout@v2
+
+      - name: Install Bundler
+        run: bin/install-bundler
+
+      - name: Compute cache key
+        id: cache-key
+        run: |
+          source /etc/os-release
+          printf \
+            "::set-output name=cache-key::alpine-%s-ruby-%s\n" \
+            "${VERSION_ID}" \
+            "${RUBY_VERSION}"
+
+      - name: Cache gems
+        uses: actions/cache@v1
+        with:
+          key: ${{ steps.cache-key.outputs.cache-key }}-gems-${{ hashFiles('Gemfile.lock') }}
+          path: vendor/bundle
+
+      - name: Install gems
+        run: bin/bundle install
+        env:
+          BUNDLE_FROZEN: true
+          BUNDLE_JOBS: 4
+          BUNDLE_RETRY: 3
+
+      - name: Run RuboCop
+        run: bin/rake rubocop
+
+      - name: Run tests
+        run: bin/rake test
