@@ -6,7 +6,7 @@
 <title>
   File: README
   
-    &mdash; Documentation by YARD 0.9.24
+    &mdash; Documentation by YARD 0.9.25
   
 </title>
 
@@ -60,11 +60,11 @@
       <div id="content"><div id='filecontents'>
 <h1 id="label-YARD-3A-3ARelativeMarkdownLinks">YARD::RelativeMarkdownLinks</h1>
 
-<p><a href="https://haines.github.io/yard-relative_markdown_links/"><img src="https://img.shields.io/badge/docs-github.io-blue.svg?style=flat-square"></a> <a href="https://rubygems.org/gems/yard-relative_markdown_links"><img src="https://img.shields.io/gem/v/yard-relative_markdown_links.svg?style=flat-square"></a> <a href="https://github.com/haines/yard-relative_markdown_links"><img src="https://img.shields.io/badge/github-haines%2Fyard--relative__markdown__links-blue.svg?style=flat-square"></a> <a href="https://github.com/haines/yard-relative_markdown_links/blob/master/LICENSE.md"><img src="https://img.shields.io/github/license/haines/yard-relative_markdown_links.svg?style=flat-square"></a> <a href="https://travis-ci.org/haines/yard-relative_markdown_links"><img src="https://img.shields.io/travis/haines/yard-relative_markdown_links.svg?style=flat-square"></a></p>
+<p><a href="https://haines.github.io/yard-relative_markdown_links/"><img src="https://img.shields.io/badge/docs-github.io-blue.svg?style=flat-square"></a> <a href="https://rubygems.org/gems/yard-relative_markdown_links"><img src="https://img.shields.io/gem/v/yard-relative_markdown_links.svg?style=flat-square"></a> <a href="https://github.com/haines/yard-relative_markdown_links"><img src="https://img.shields.io/badge/github-haines%2Fyard--relative__markdown__links-blue.svg?style=flat-square"></a> <a href="https://github.com/haines/yard-relative_markdown_links/blob/main/LICENSE.md"><img src="https://img.shields.io/github/license/haines/yard-relative_markdown_links.svg?style=flat-square"></a></p>
 
 <p>A <a href="https://yardoc.org">YARD</a> plugin to allow relative links between Markdown files.</p>
 
-<p>GitHub and YARD render Markdown files differently. In particular, relative links between Markdown files that work in GitHub don't work in YARD. For example, if you have <code>[hello](FOO.md)</code> in your README, YARD renders it as <code>&lt;a href="FOO.md"&gt;hello&lt;/a&gt;</code>, creating a broken link in your docs.</p>
+<p>GitHub and YARD render Markdown files differently. In particular, relative links in Markdown files that work in GitHub don't work in YARD. For example, if you have <code>[hello](FOO.md)</code> in your README, YARD renders it as <code>&lt;a href="FOO.md"&gt;hello&lt;/a&gt;</code>, creating a broken link in your docs.</p>
 
 <p>With this plugin enabled, you'll get <code>&lt;a href="file.FOO.html"&gt;hello&lt;/a&gt;</code> instead, which correctly links through to the rendered HTML file.</p>
 
@@ -98,6 +98,8 @@
 **/*.md
 </code></pre>
 
+<p>If you include other types of file, relative links to those files from Markdown will work as well.</p>
+
 <h2 id="label-Development">Development</h2>
 
 <p>After checking out the repo, run <code>bin/setup</code> to install dependencies. Then, run <code>bin/rake test</code> to run the tests. You can also run <code>bin/console</code> for an interactive prompt that will allow you to experiment.</p>
@@ -114,9 +116,9 @@
 </div></div>
 
       <div id="footer">
-  Generated on Fri Mar  6 18:26:16 2020 by
+  Generated on Sun Jul 26 14:12:23 2020 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
-  0.9.24 (ruby-2.7.0).
+  0.9.25 (ruby-2.7.1).
 </div>
 
     </div>
