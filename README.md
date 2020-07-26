@@ -3,8 +3,7 @@
 [![Docs](https://img.shields.io/badge/docs-github.io-blue.svg?style=flat-square)](https://haines.github.io/yard-relative_markdown_links/)
 [![Gem](https://img.shields.io/gem/v/yard-relative_markdown_links.svg?style=flat-square)](https://rubygems.org/gems/yard-relative_markdown_links)
 [![GitHub](https://img.shields.io/badge/github-haines%2Fyard--relative__markdown__links-blue.svg?style=flat-square)](https://github.com/haines/yard-relative_markdown_links)
-[![License](https://img.shields.io/github/license/haines/yard-relative_markdown_links.svg?style=flat-square)](https://github.com/haines/yard-relative_markdown_links/blob/master/LICENSE.md)
-[![Travis](https://img.shields.io/travis/haines/yard-relative_markdown_links.svg?style=flat-square)](https://travis-ci.org/haines/yard-relative_markdown_links)
+[![License](https://img.shields.io/github/license/haines/yard-relative_markdown_links.svg?style=flat-square)](https://github.com/haines/yard-relative_markdown_links/blob/main/LICENSE.md)
 
 
 A [YARD](https://yardoc.org) plugin to allow relative links between Markdown files.

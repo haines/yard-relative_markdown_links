@@ -20,18 +20,11 @@ Gem::Specification.new do |spec|
   spec.require_paths = ["lib"]
 
   spec.metadata["bug_tracker_uri"] = "#{spec.homepage}/issues"
-  spec.metadata["changelog_uri"] = "#{spec.homepage}/blob/master/CHANGELOG.md"
+  spec.metadata["changelog_uri"] = "#{spec.homepage}/blob/main/CHANGELOG.md"
   spec.metadata["documentation_uri"] = "https://haines.github.io/yard-relative_markdown_links/"
   spec.metadata["homepage_uri"] = spec.homepage
   spec.metadata["source_code_uri"] = spec.homepage
   spec.metadata["yard.run"] = "yri"
 
   spec.add_dependency "nokogiri", "~> 1.8"
-
-  spec.add_development_dependency "bundler", "~> 2.1"
-  spec.add_development_dependency "minitest", "~> 5.11"
-  spec.add_development_dependency "pry", "~> 0.11"
-  spec.add_development_dependency "rake", "~> 12.1"
-  spec.add_development_dependency "rubocop", "~> 0.80.1"
-  spec.add_development_dependency "yard", "~> 0.9"
 end

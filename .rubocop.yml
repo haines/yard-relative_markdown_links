@@ -1,5 +1,6 @@
 AllCops:
-  TargetRubyVersion: 2.3
+  NewCops: enable
+  TargetRubyVersion: 2.5
   Exclude:
     - bin/bundle
     - bin/rake
