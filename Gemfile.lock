@@ -12,7 +12,7 @@ GEM
     method_source (1.0.0)
     mini_portile2 (2.5.0)
     minitest (5.14.3)
-    nokogiri (1.11.0)
+    nokogiri (1.11.1)
       mini_portile2 (~> 2.5.0)
       racc (~> 1.4)
     parallel (1.19.2)
