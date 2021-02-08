@@ -43,7 +43,7 @@ jobs:
             "${RUBY_VERSION}"
 
       - name: Cache gems
-        uses: actions/cache@v2
+        uses: actions/cache@v2.1.4
         with:
           key: ${{ steps.cache-key.outputs.cache-key }}-gems-${{ hashFiles('Gemfile.lock') }}
           path: vendor/bundle
