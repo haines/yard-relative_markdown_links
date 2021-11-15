@@ -8,6 +8,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased]
 No notable changes.
 
+## [0.4.1] - 2021-11-15
+### Changed
+* Require MFA to publish gem ([#92](https://github.com/haines/yard-relative_markdown_links/pull/92))
+
 ## [0.4.0] - 2021-01-29
 ### Changed
 * Require Ruby ≥ 2.5 ([#40](https://github.com/haines/yard-relative_markdown_links/pull/40))
@@ -33,7 +37,8 @@ No notable changes.
 ### Added
 - A YARD plugin to allow relative links between Markdown files ([#1](https://github.com/haines/yard-relative_markdown_links/pull/1))
 
-[Unreleased]: https://github.com/haines/yard-relative_markdown_links/compare/v0.4.0...HEAD
+[Unreleased]: https://github.com/haines/yard-relative_markdown_links/compare/v0.4.1...HEAD
+[0.4.1]: https://github.com/haines/yard-relative_markdown_links/compare/v0.4.0...v0.4.1
 [0.4.0]: https://github.com/haines/yard-relative_markdown_links/compare/v0.3.0...v0.4.0
 [0.3.0]: https://github.com/haines/yard-relative_markdown_links/compare/v0.2.0...v0.3.0
 [0.2.0]: https://github.com/haines/yard-relative_markdown_links/compare/v0.1.2...v0.2.0
