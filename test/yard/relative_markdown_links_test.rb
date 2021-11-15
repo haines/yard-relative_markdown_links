@@ -14,10 +14,12 @@ module YARD
         end
 
         def options
-          OpenStruct.new(
-            files: [
-              OpenStruct.new(filename: "world.md"),
-              OpenStruct.new(filename: "planet.yaml")
+          file = Struct.new(:filename)
+
+          Struct.new(:files).new(
+            [
+              file.new("world.md"),
+              file.new("planet.yaml")
             ]
           )
         end
