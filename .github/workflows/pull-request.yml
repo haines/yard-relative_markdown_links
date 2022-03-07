@@ -28,7 +28,7 @@ jobs:
         run: apk add build-base git tar
 
       - name: Check out source code
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
 
       - name: Install Bundler
         run: bin/install-bundler
