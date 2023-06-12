@@ -11,8 +11,17 @@ end
 
 RuboCop::RakeTask.new
 
-desc "Generate documentation"
-YARD::Rake::YardocTask.new :doc
-CLOBBER << "doc/"
+namespace :docs do
+  desc "Generate documentation"
+  YARD::Rake::YardocTask.new :generate
+  CLOBBER << "doc/"
 
-task :default => [:doc, :rubocop, :test]
+  desc "Check relative links in documentation"
+  task :check do
+    abort "Incorrect relative links" unless File.read("doc/file.README.html").include?('href="file.LICENSE.html"')
+  end
+end
+
+task docs: ["docs:generate", "docs:check"]
+
+task default: [:docs, :rubocop, :test]

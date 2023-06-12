@@ -31,3 +31,6 @@ jobs:
 
       - name: Run tests
         run: bin/rake test
+
+      - name: Generate docs
+        run: bin/rake docs

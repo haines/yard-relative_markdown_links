@@ -38,6 +38,18 @@ module YARD
       assert_equal expected_output, @template.resolve_links(input)
     end
 
+    def test_relative_markdown_links_from_rdoc
+      input = <<~HTML
+        <p>Hello, <a href="world_md.html">World</a></p>
+      HTML
+
+      expected_output = <<~HTML
+        <p>Hello, {file:world.md World}</p>
+      HTML
+
+      assert_equal expected_output, @template.resolve_links(input)
+    end
+
     def test_relative_nonmarkdown_links
       input = <<~HTML
         <p>Hello, <a href="planet.yaml">Planet</a></p>
