@@ -6,6 +6,9 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
+No notable changes.
+
+## [0.5.0] - 2023-06-12
 ### Changed
 * Require Ruby ≥ 3.0 ([#175](https://github.com/haines/yard-relative_markdown_links/pull/175))
 * Test against Ruby 3.1 ([#107](https://github.com/haines/yard-relative_markdown_links/pull/107))
@@ -44,7 +47,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Added
 - A YARD plugin to allow relative links between Markdown files ([#1](https://github.com/haines/yard-relative_markdown_links/pull/1))
 
-[Unreleased]: https://github.com/haines/yard-relative_markdown_links/compare/v0.4.1...HEAD
+[Unreleased]: https://github.com/haines/yard-relative_markdown_links/compare/v0.5.0...HEAD
+[0.5.0]: https://github.com/haines/yard-relative_markdown_links/compare/v0.4.1...v0.5.0
 [0.4.1]: https://github.com/haines/yard-relative_markdown_links/compare/v0.4.0...v0.4.1
 [0.4.0]: https://github.com/haines/yard-relative_markdown_links/compare/v0.3.0...v0.4.0
 [0.3.0]: https://github.com/haines/yard-relative_markdown_links/compare/v0.2.0...v0.3.0
