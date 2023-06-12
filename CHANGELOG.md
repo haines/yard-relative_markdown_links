@@ -7,8 +7,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 ### Changed
-* Require Ruby ≥ 2.6 ([#107](https://github.com/haines/yard-relative_markdown_links/pull/107))
+* Require Ruby ≥ 3.0 ([#175](https://github.com/haines/yard-relative_markdown_links/pull/175))
 * Test against Ruby 3.1 ([#107](https://github.com/haines/yard-relative_markdown_links/pull/107))
+* Test against Ruby 3.2 ([#175](https://github.com/haines/yard-relative_markdown_links/pull/175))
 
 ## [0.4.1] - 2021-11-15
 ### Changed

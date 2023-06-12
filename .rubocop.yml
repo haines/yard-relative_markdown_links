@@ -4,13 +4,16 @@ require:
 
 AllCops:
   NewCops: enable
-  TargetRubyVersion: 2.6
+  TargetRubyVersion: 3.0
   Exclude:
     - bin/bundle
     - bin/rake
     - vendor/bundle/**/*
 
 Layout/LineLength:
+  Enabled: false
+
+Metrics/BlockLength:
   Enabled: false
 
 Metrics/MethodLength:
