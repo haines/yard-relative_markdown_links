@@ -16,7 +16,16 @@ Gem::Specification.new do |spec|
   spec.homepage = "https://github.com/haines/yard-relative_markdown_links"
   spec.license = "MIT"
 
-  spec.files = Dir.chdir(__dir__) { `git ls-files -z`.split("\x0").reject { |path| path.match(%r{^test/}) } }
+  spec.files = Dir[
+    "lib/**/*.rb",
+    ".yardopts",
+    "CHANGELOG.md",
+    "CODE_OF_CONDUCT.md",
+    "LICENSE.md",
+    "README.md",
+    "yard-relative_markdown_links.gemspec"
+  ]
+
   spec.require_paths = ["lib"]
 
   spec.metadata["bug_tracker_uri"] = "#{spec.homepage}/issues"
@@ -27,7 +36,7 @@ Gem::Specification.new do |spec|
   spec.metadata["source_code_uri"] = spec.homepage
   spec.metadata["yard.run"] = "yri"
 
-  spec.required_ruby_version = ">= 2.6"
+  spec.required_ruby_version = ">= 3.0"
 
-  spec.add_dependency "nokogiri", "~> 1.8"
+  spec.add_dependency "nokogiri", ">= 1.14.3", "< 2"
 end
