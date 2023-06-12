@@ -6,7 +6,7 @@
 <title>
   File: README
   
-    &mdash; Documentation by YARD 0.9.26
+    &mdash; Documentation by YARD 0.9.34
   
 </title>
 
@@ -64,13 +64,13 @@
 
 <p>A <a href="https://yardoc.org">YARD</a> plugin to allow relative links between Markdown files.</p>
 
-<p>GitHub and YARD render Markdown files differently. In particular, relative links in Markdown files that work in GitHub don't work in YARD. For example, if you have <code>[hello](FOO.md)</code> in your README, YARD renders it as <code>&lt;a href="FOO.md"&gt;hello&lt;/a&gt;</code>, creating a broken link in your docs.</p>
+<p>GitHub and YARD render Markdown files differently. In particular, relative links in Markdown files that work in GitHub don’t work in YARD. For example, if you have <code>[hello](FOO.md)</code> in your README, YARD renders it as <code>&lt;a href="FOO.md"&gt;hello&lt;/a&gt;</code>, creating a broken link in your docs.</p>
 
-<p>With this plugin enabled, you'll get <code>&lt;a href="file.FOO.html"&gt;hello&lt;/a&gt;</code> instead, which correctly links through to the rendered HTML file.</p>
+<p>With this plugin enabled, you’ll get <code>&lt;a href="file.FOO.html"&gt;hello&lt;/a&gt;</code> instead, which correctly links through to the rendered HTML file.</p>
 
 <h2 id="label-Installation">Installation</h2>
 
-<p>Add this line to your application's <code>Gemfile</code>:</p>
+<p>Add this line to your application’s <code>Gemfile</code>:</p>
 
 <pre class="code ruby"><code class="ruby"><span class='id identifier rubyid_gem'>gem</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>yard-relative_markdown_links</span><span class='tstring_end'>&quot;</span></span>
 </code></pre>
@@ -87,12 +87,12 @@
 
 <h2 id="label-Usage">Usage</h2>
 
-<p>Add this line to your application's <code>.yardopts</code>:</p>
+<p>Add this line to your application’s <code>.yardopts</code>:</p>
 
 <pre class="code ruby"><code class="ruby">--plugin relative_markdown_links
 </code></pre>
 
-<p>You'll also need to make sure your Markdown files are processed by YARD. To include all Markdown files in your project, add the following lines to the end of your application's <code>.yardopts</code>:</p>
+<p>You’ll also need to make sure your Markdown files are processed by YARD. To include all Markdown files in your project, add the following lines to the end of your application’s <code>.yardopts</code>:</p>
 
 <pre class="code ruby"><code class="ruby">-
 **/*.md
@@ -116,9 +116,9 @@
 </div></div>
 
       <div id="footer">
-  Generated on Mon Nov 15 22:52:19 2021 by
-  <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
-  0.9.26 (ruby-3.0.2).
+  Generated on Mon Jun 12 21:44:45 2023 by
+  <a href="https://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
+  0.9.34 (ruby-3.2.2).
 </div>
 
     </div>
