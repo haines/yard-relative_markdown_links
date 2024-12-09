@@ -1,0 +1,12 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "extends": ["schedule:weekly"],
+  "configMigration": true,
+  "reviewers": ["haines"],
+  "packageRules": [
+    {
+      "matchPackageNames": ["*"],
+      "groupName": "dependencies"
+    }
+  ]
+}
