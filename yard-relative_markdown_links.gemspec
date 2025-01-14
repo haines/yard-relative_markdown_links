@@ -36,7 +36,7 @@ Gem::Specification.new do |spec|
   spec.metadata["source_code_uri"] = spec.homepage
   spec.metadata["yard.run"] = "yri"
 
-  spec.required_ruby_version = ">= 3.0"
+  spec.required_ruby_version = ">= 3.1"
 
   spec.add_dependency "nokogiri", ">= 1.14.3", "< 2"
 end

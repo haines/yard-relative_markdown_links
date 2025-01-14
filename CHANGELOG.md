@@ -6,7 +6,10 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
-No notable changes.
+### Changed
+* Require Ruby ≥ 3.1 ([#268](https://github.com/haines/yard-relative_markdown_links/pull/268))
+* Test against Ruby 3.3 ([#212](https://github.com/haines/yard-relative_markdown_links/pull/212))
+* Test against Ruby 3.4 ([#268](https://github.com/haines/yard-relative_markdown_links/pull/268))
 
 ## [0.5.0] - 2023-06-12
 ### Changed
