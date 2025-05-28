@@ -1,7 +1,6 @@
 # frozen_string_literal: true
 
 require "nokogiri"
-require "set"
 require "uri"
 require "yard"
 require "yard/relative_markdown_links/version"
