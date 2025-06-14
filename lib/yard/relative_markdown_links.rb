@@ -2,14 +2,14 @@
 
 require "nokogiri"
 require "uri"
-require "yard"
-require "yard/relative_markdown_links/version"
+
+require_relative "relative_markdown_links/version"
 
 module YARD # rubocop:disable Style/Documentation
   # GitHub and YARD render Markdown files differently. In particular, relative
   # links between Markdown files that work in GitHub don't work in YARD.
   # For example, if you have `[hello](FOO.md)` in your README, YARD renders it
-  # as `<a href="FOO.md">hello</a>`, creating a broken link in your docs.
+  # as `<a href="FOO_md.html">hello</a>`, creating a broken link in your docs.
   #
   # With this plugin enabled, you'll get `<a href="file.FOO.html">hello</a>`
   # instead, which correctly links through to the rendered HTML file.
