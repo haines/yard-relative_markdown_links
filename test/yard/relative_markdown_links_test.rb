@@ -24,6 +24,16 @@ module YARD
           )
         end
       }.new
+
+      clean
+    end
+
+    def teardown
+      clean
+    end
+
+    def clean
+      FileUtils.rm_rf([".yardoc", "doc"].map { |path| File.expand_path("files/#{path}", __dir__) })
     end
 
     def test_relative_markdown_links
@@ -76,6 +86,26 @@ module YARD
       HTML
 
       assert_equal input, @template.resolve_links(input)
+    end
+
+    def test_acceptance
+      bundle = File.expand_path("../../bin/bundle", __dir__)
+      files = File.expand_path("files", __dir__)
+
+      output, status = Open3.capture2e(
+        bundle, "exec", "yard",
+        "--plugin", "relative_markdown_links",
+        "--markup", "markdown",
+        "-",
+        "*.md",
+        chdir: files
+      )
+
+      flunk "YARD exited with status #{status.exitstatus}\n#{output}" unless status.success?
+
+      assert_includes File.read(File.expand_path("doc/file.1.html", files)), <<~HTML.chomp
+        <a href="file.2.html" title="Hello">Hello</a>
+      HTML
     end
   end
 end

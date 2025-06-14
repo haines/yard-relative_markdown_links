@@ -1,4 +1,4 @@
-/.bundle/
-/.yardoc/
-/doc/
-/pkg/
+.bundle/
+.yardoc/
+doc/
+pkg/

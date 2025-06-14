@@ -7,6 +7,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 ### Changed
+* Don't `require "yard"` to avoid a circular require ([#292](https://github.com/haines/yard-relative_markdown_links/pull/292))
 * Require Ruby ≥ 3.2 ([#268](https://github.com/haines/yard-relative_markdown_links/pull/268), [#288](https://github.com/haines/yard-relative_markdown_links/pull/288))
 * Test against Ruby 3.3 ([#212](https://github.com/haines/yard-relative_markdown_links/pull/212))
 * Test against Ruby 3.4 ([#268](https://github.com/haines/yard-relative_markdown_links/pull/268))
