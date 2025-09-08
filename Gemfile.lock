@@ -39,7 +39,7 @@ GEM
       erb
       psych (>= 4.0.0)
     regexp_parser (2.11.2)
-    rubocop (1.80.0)
+    rubocop (1.80.2)
       json (~> 2.3)
       language_server-protocol (~> 3.17.0.2)
       lint_roller (~> 1.1.0)
@@ -53,7 +53,7 @@ GEM
     rubocop-ast (1.46.0)
       parser (>= 3.3.7.2)
       prism (~> 1.4)
-    rubocop-minitest (0.38.1)
+    rubocop-minitest (0.38.2)
       lint_roller (~> 1.1)
       rubocop (>= 1.75.0, < 2.0)
       rubocop-ast (>= 1.38.0, < 2.0)
