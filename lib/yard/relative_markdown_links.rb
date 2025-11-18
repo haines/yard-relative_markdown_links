@@ -36,11 +36,33 @@ module YARD # rubocop:disable Style/Documentation
         href = URI(link["href"])
         next unless href.relative?
 
+        # Try exact match (e.g., README.md linking to docs/USER_GUIDE.md)
         if filenames.include?(href.path)
           link.replace "{file:#{href} #{link.inner_html}}"
           next
         end
 
+        # Try resolving relative to current file's directory
+        if defined?(@file) && @file
+          current_dir = File.dirname(@file.filename)
+          resolved_path = File.join(current_dir, href.path)
+
+          # Check if this resolves to a known file
+          if filenames.include?(resolved_path)
+            href.path = resolved_path
+            link.replace "{file:#{href} #{link.inner_html}}"
+            next
+          end
+
+          # Check if this resolves to a known RDoc-style file
+          if rdoc_filenames[resolved_path]
+            href.path = rdoc_filenames[resolved_path]
+            link.replace "{file:#{href} #{link.inner_html}}"
+            next
+          end
+        end
+
+        # Try exact RDoc-style match
         href.path = rdoc_filenames[href.path]
         next unless href.path && filenames.include?(href.path)
 
